@@ -111,3 +111,7 @@ add_executable(mono_euroc
 Examples/Monocular/mono_euroc.cc)
 target_link_libraries(mono_euroc ${PROJECT_NAME})
 
+add_executable(test_vocab test_vocab.cpp)
+target_link_libraries(test_vocab ${PROJECT_NAME} ${OpenCV_LIBS})
+set_target_properties(test_vocab PROPERTIES CXX_STANDARD 11)
+
